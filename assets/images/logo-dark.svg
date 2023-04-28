@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 59.3 24" style="enable-background:new 0 0 59.3 24;" xml:space="preserve">
+	 viewBox="0 0 64 24" style="enable-background:new 0 0 64 24;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#182A43;}
+	.st0{fill:#334A5B;}
 </style>
-<path class="st0" d="M34.5,10.1v13.3h-7.4V10.3C27.1,8.1,25.9,7,24,7s-3.3,1.2-3.3,3.6v12.8h-7.4V10.3c0-2.2-1.1-3.3-2.9-3.3
-	s-3,1.2-3,3.6v12.8H0V1.5h7.1v2.2c1.3-1.8,3.3-2.7,6-2.7c2.8,0,4.9,1,6.2,2.9c1.6-2,4-2.9,6.8-2.9C31.4,1,34.5,4.2,34.5,10.1z"/>
-<path class="st0" d="M59.3,11.7v11.7h-7.4V19H45v4.4h-7.3V11.7C37.7,4.9,42.1,1,48.5,1C54.8,1,59.3,4.9,59.3,11.7z M51.9,13.4v-2.3
-	c0-2.8-1.5-4.1-3.5-4.1s-3.5,1.3-3.5,4.1v2.3H51.9z"/>
+<path class="st0" d="M37.2,9.9v13.3h-8V10.1c0-2.2-1.3-3.3-3.3-3.3s-3.6,1.2-3.6,3.6v12.8h-8V10.1c0-2.2-1.2-3.3-3.1-3.3S8,8,8,10.4
+	v12.8H0V1.3h7.7v2.2c1.4-1.8,3.6-2.7,6.5-2.7c3,0,5.3,1,6.7,2.9c1.7-2,4.3-2.9,7.3-2.9C33.9,0.8,37.2,4,37.2,9.9z"/>
+<path class="st0" d="M64,11.5v11.7h-8v-4.4h-7.4v4.4h-7.9V11.5c0-6.8,4.7-10.7,11.7-10.7C59.1,0.8,64,4.7,64,11.5z M56,13.2v-2.3
+	c0-2.8-1.6-4.1-3.8-4.1s-3.8,1.3-3.8,4.1v2.3H56z"/>
 </svg>
