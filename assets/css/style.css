@@ -913,18 +913,13 @@ textarea.input-field {
 }
 
 button {
-  position: relative;
   margin: 10px;
-  padding: 15px 25px;
-  font-size: 18px;
-  background-color: #6778d1;
-  color: #ffffff;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  overflow: hidden;
-  z-index: 1;
-  transition: background-color 0.3s;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100px; /* Change this value to match the width of your images */
+    height: 100px; /* Change this value to match the height of your images */
 }
 
 button:focus {
