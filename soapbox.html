@@ -71,22 +71,34 @@
             "audio0.mp3",
         ];
 
-        function playAudioFile(index) {
-            const audio = new Audio(audioFiles[index]);
-            audio.play();
-        }
+        const playingAudio = new Array(10).fill(null);
 
-        document.querySelectorAll("button").forEach((button, index) => {
-            button.addEventListener("click", () => playAudioFile(index));
+function playOrStopAudioFile(index) {
+    if (playingAudio[index]) {
+        playingAudio[index].pause();
+        playingAudio[index].currentTime = 0;
+        playingAudio[index] = null;
+    } else {
+        const audio = new Audio(audioFiles[index]);
+        audio.play();
+        playingAudio[index] = audio;
+        audio.addEventListener("ended", () => {
+            playingAudio[index] = null;
         });
+    }
+}
 
-        document.addEventListener("keydown", (event) => {
-            if (event.key >= '1' && event.key <= '9') {
-                playAudioFile(parseInt(event.key) - 1);
-            } else if (event.key === '0') {
-                playAudioFile(9);
-            }
-        });
-    </script>
+document.querySelectorAll("button").forEach((button, index) => {
+    button.addEventListener("click", () => playOrStopAudioFile(index));
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key >= '1' && event.key <= '9') {
+        playOrStopAudioFile(parseInt(event.key) - 1);
+    } else if (event.key === '0') {
+        playOrStopAudioFile(9);
+    }
+});
+</script>
 </body>
 </html>
