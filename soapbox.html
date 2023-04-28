@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Digital Piano</title>
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="1">1</button>
+        <button id="2">2</button>
+        <button id="3">3</button>
+        <button id="4">4</button>
+        <button id="5">5</button>
+        <button id="6">6</button>
+        <button id="7">7</button>
+        <button id="8">8</button>
+        <button id="9">9</button>
+        <button id="0">0</button>
+    </div>
+
+    <script>
+        const audioFiles = [
+            "audio1.mp3",
+            "audio2.mp3",
+            "audio3.mp3",
+            "audio4.mp3",
+            "audio5.mp3",
+            "audio6.mp3",
+            "audio7.mp3",
+            "audio8.mp3",
+            "audio9.mp3",
+            "audio0.mp3",
+        ];
+
+        function playAudioFile(index) {
+            const audio = new Audio(audioFiles[index]);
+            audio.play();
+        }
+
+        document.querySelectorAll("button").forEach((button, index) => {
+            button.addEventListener("click", () => playAudioFile(index));
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key >= '1' && event.key <= '9') {
+                playAudioFile(parseInt(event.key) - 1);
+            } else if (event.key === '0') {
+                playAudioFile(9);
+            }
+        });
+    </script>
+</body>
+</html>
