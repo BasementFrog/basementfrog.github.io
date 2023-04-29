@@ -887,17 +887,6 @@ textarea.input-field {
 
   .hero .section-text { --fs-5: 2.4rem; }
 
-/**
-   * TIMELINE
-   */
-
-   .timeline-item {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-
-   .timeline-item { padding-block: 30px; }
-
 
 
   /**
@@ -910,19 +899,4 @@ textarea.input-field {
 
 }
 
-/*-----------------------------------*\
-  #TIMELINE
-\*-----------------------------------*/
 
-.timeline-item {
-  padding-block: 20px;
-  font-size: var(--fs-18);
-  display: grid;
-  gap: 15px;
-}
-
-.timeline-item:not(:last-child) { border-block-end: 1px solid var(--black_10); }
-
-.timeline-item .item-period { font: unset; }
-
-.timeline-item .item-title { color: var(--black); }
