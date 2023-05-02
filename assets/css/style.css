@@ -408,7 +408,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .topspace {
-  padding-block-start: calc(var(--section-padding) + 0px);
+  padding-block-start: calc(30px);
 }
 
 
