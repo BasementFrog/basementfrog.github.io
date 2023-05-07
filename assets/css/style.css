@@ -353,6 +353,28 @@ body.nav-active { overflow: hidden; }
   opacity: 0.8;
 }
 
+/* Hide the nested dropdown list by default */
+.dropdown-content {
+  display: none;
+}
+
+/* Show the nested dropdown list when the dropdown list item is hovered over */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the dropdown links */
+.dropdown-content li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+/* Style the dropdown links when hovered over */
+.dropdown-content li a:hover {
+  background-color: #f2f2f2;
+}
 
 
 
