@@ -283,22 +283,23 @@ body.nav-active { overflow: hidden; }
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
+  position: absolute; /* Add this line */
+  top: 100%; /* Add this line */
   left: -300px;
   background-color: var(--raisin-black);
   color: var(--white);
   max-width: 300px;
   width: 100%;
-  height: 100vh;
+  max-height: calc(100vh - 70px); /* Adjust as necessary */
   padding: 30px;
   padding-block-end: 40px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  z-index: 2;
+  z-index: 3; /* Add this line */
   visibility: hidden;
   transition: var(--transition-3);
+  overflow-y: scroll;
 }
 
 .navbar.active {
@@ -353,8 +354,27 @@ body.nav-active { overflow: hidden; }
   opacity: 0.8;
 }
 
+.dropdown-content {
+  display: none;
+}
 
+/* Show the nested dropdown list when the dropdown list item is hovered over */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
+/* Style the dropdown links */
+.dropdown-content li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 10px
+}
+
+/* Style the dropdown links when hovered over */
+.dropdown-content li a:hover {
+background-color: #f2f2f2;
+}
 
 
 /*-----------------------------------*\
