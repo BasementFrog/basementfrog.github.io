@@ -115,57 +115,56 @@
       </div>
       <img src="./assets/Soapbox.png" alt="Interactive Image" usemap="#interactive-map">
     <map name="interactive-map">
-        <area id="area1" shape="rect" coords="0,0,100,100">
-        <area id="area2" shape="rect" coords="100,0,200,100">
+      <area id="area1" shape="rect" coords="0,0,1145,464"> <!-- Top Half -->
+      <area id="area2" shape="rect" coords="0,465,1145,929"> <!-- Bottom Half -->      
         <!-- Add more areas as needed -->
     </map>
 
     <script>
-         const audioFiles = [
-            "./audio/Forest Recorder_01.mp3",
-            "audio/audio2.mp3",
-            // Add more audio file paths as needed
-        ];
+      const audioFiles = [
+          "audio/audio1.mp3",
+          "audio/audio2.mp3",
+          // Add more audio file paths as needed
+      ];
 
-        const playingAudio = new Array(audioFiles.length).fill(null);
+      const playingAudio = new Array(audioFiles.length).fill(null);
 
-        function playOrStopAudioFile(index) {
-            if (playingAudio[index]) {
-                playingAudio[index].pause();
-                playingAudio[index].currentTime = 0;
-                playingAudio[index] = null;
-            } else {
-                const audio = new Audio(audioFiles[index]);
-                audio.play();
-                playingAudio[index] = audio;
-                audio.addEventListener("ended", () => {
-                    playingAudio[index] = null;
-                });
-            }
-        }
+      function playOrStopAudioFile(index) {
+          if (playingAudio[index]) {
+              playingAudio[index].pause();
+              playingAudio[index].currentTime = 0;
+              playingAudio[index] = null;
+          } else {
+              const audio = new Audio(audioFiles[index]);
+              audio.play();
+              playingAudio[index] = audio;
+              audio.addEventListener("ended", () => {
+                  playingAudio[index] = null;
+              });
+          }
+      }
 
-        document.querySelectorAll("area").forEach((area, index) => {
-            area.addEventListener("click", (event) => {
-                event.preventDefault();
-                playOrStopAudioFile(index);
-            });
-        });
+      document.querySelectorAll("area").forEach((area, index) => {
+          area.addEventListener("click", (event) => {
+              event.preventDefault();
+              playOrStopAudioFile(index);
+          });
+      });
 
-/*info button java*/
+      /*info button java*/
 
-const infoButton = document.querySelector(".info-button");
-const infoTextContainer = document.querySelector(".info-text-container");
-const closeButton = document.querySelector(".close-button");
+      const infoButton = document.querySelector(".info-button");
+      const infoTextContainer = document.querySelector(".info-text-container");
+      const closeButton = document.querySelector(".close-button");
 
-infoButton.addEventListener("click", () => {
-  infoTextContainer.style.display = "block";
-});
+      infoButton.addEventListener("click", () => {
+          infoTextContainer.style.display = "block";
+      });
 
-closeButton.addEventListener("click", () => {
-  infoTextContainer.style.display = "none";
-});
-
-</script>
+      closeButton.addEventListener("click", () => {
+          infoTextContainer.style.display = "none";
+      });
+  </script>
 </body>
 <!--© 2023 Malvika Agarwal. All rights reserved.--> 
 
