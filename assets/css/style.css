@@ -416,7 +416,11 @@ body.nav-active { overflow: hidden; }
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
-
+.pagebio .wrapper {
+  display: grid;
+  gap: 50px;
+  margin-block-end: 70px;
+}
 .about .wrapper {
   /*display: grid;
   gap: 50px;*/
